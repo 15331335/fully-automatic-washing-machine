@@ -112,4 +112,82 @@ Sub step7()
     Range("J" & ir + 1) = "合计"
     Range("K" & ir + 1).Select
     ActiveCell.Formula = "=SUM(K2:K" & ir & ")"
+    Call step8
+End Sub
+
+Sub step8()
+    ir = Range("j65536").End(xlUp).Row
+    Range("J2:K" & ir - 1).Select
+    Range("K" & ir - 1).Activate
+    ActiveWorkbook.Worksheets("统计").Sort.SortFields.Clear
+    ActiveWorkbook.Worksheets("统计").Sort.SortFields.Add2 Key:=Range("K" & ir - 1), _
+        SortOn:=xlSortOnValues, Order:=xlDescending, DataOption:=xlSortNormal
+    With ActiveWorkbook.Worksheets("统计").Sort
+        .SetRange Range("J2:K" & ir - 1)
+        .Header = xlNo
+        .MatchCase = False
+        .Orientation = xlTopToBottom
+        .SortMethod = xlPinYin
+        .Apply
+    End With
+    Call step9
+End Sub
+
+Sub step9()
+    Range("M1").Select
+    ActiveCell.FormulaR1C1 = "不合格率"
+    Range("N1").Select
+    Application.CutCopyMode = False
+    ir1 = Range("e65536").End(xlUp).Row
+    ir2 = Range("k65536").End(xlUp).Row
+    ActiveCell.Formula = "=K" & ir2 & "/E" & ir1
+    Range("N1").Select
+    Selection.NumberFormatLocal = "0.00%"
+    Call step10
+End Sub
+
+Sub step10()
+    Range("M2").Select
+    ActiveCell.FormulaR1C1 = "案件类别选择错误"
+    Range("M3").Select
+    ActiveCell.FormulaR1C1 = "账号录入、涉案电话不规范"
+    Range("M4").Select
+    ActiveCell.FormulaR1C1 = "简要案情过于简单"
+    Call step11
+End Sub
+
+Sub step11()
+    Sheets("标记").Select
+    c = 0
+    For r = 2 To ActiveSheet.UsedRange.Rows.Count
+        If Cells(r, 4).Interior.ColorIndex = 6 Then
+            c = c + 1
+        End If
+    Next
+    Sheets("统计").Range("N2") = c
+    
+    c = 0
+    For r = 2 To ActiveSheet.UsedRange.Rows.Count
+        If Cells(r, 18).Interior.ColorIndex = 6 Then 'or 19
+            c = c + 1
+        End If
+    Next
+    Sheets("统计").Range("N4") = c
+    
+    '20-26
+    c = 0
+    For r = 2 To ActiveSheet.UsedRange.Rows.Count
+        If Cells(r, 20).Interior.ColorIndex = 6 Or _
+            Cells(r, 21).Interior.ColorIndex = 6 Or _
+            Cells(r, 22).Interior.ColorIndex = 6 Or _
+            Cells(r, 23).Interior.ColorIndex = 6 Or _
+            Cells(r, 24).Interior.ColorIndex = 6 Or _
+            Cells(r, 25).Interior.ColorIndex = 6 Or _
+            Cells(r, 26).Interior.ColorIndex = 6 Then
+            c = c + 1
+        End If
+    Next
+    Sheets("统计").Range("N3") = c
+    Sheets("统计").Select
+    Columns("M:M").EntireColumn.AutoFit
 End Sub
