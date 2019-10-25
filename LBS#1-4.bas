@@ -1,0 +1,310 @@
+Attribute VB_Name = "模块1"
+Dim arr(1 To 750) As Variant
+Sub init()
+arr(202) = "希腊"
+arr(204) = "荷兰"
+arr(206) = "比利时"
+arr(208) = "法国"
+arr(212) = "摩纳哥"
+arr(213) = "安道尔"
+arr(214) = "西班牙"
+arr(216) = "匈牙利"
+arr(218) = "波斯尼亚和黑塞哥维那"
+arr(219) = "克罗地亚"
+arr(220) = "塞尔维亚共和国"
+arr(221) = "科索沃"
+arr(222) = "意大利"
+arr(226) = "罗马尼亚"
+arr(228) = "瑞士"
+arr(230) = "捷克"
+arr(231) = "斯洛伐克"
+arr(232) = "奥地利"
+arr(234) = "英国"
+arr(235) = "英国"
+arr(238) = "丹麦"
+arr(240) = "瑞典"
+arr(242) = "挪威"
+arr(244) = "芬兰"
+arr(246) = "立陶宛"
+arr(247) = "拉脱维亚"
+arr(248) = "爱沙尼亚"
+arr(250) = "俄罗斯"
+arr(255) = "乌克兰"
+arr(257) = "白俄罗斯"
+arr(259) = "摩尔多瓦"
+arr(260) = "波兰"
+arr(262) = "德国"
+arr(266) = "直布罗陀(英国)"
+arr(268) = "葡萄牙"
+arr(270) = "卢森堡"
+arr(272) = "爱尔兰共和国"
+arr(274) = "冰岛"
+arr(276) = "阿尔巴尼亚"
+arr(278) = "马耳他"
+arr(280) = "塞浦路斯"
+arr(282) = "格鲁吉亚"
+arr(283) = "亚美尼亚"
+arr(284) = "保加利亚"
+arr(286) = "土耳其"
+arr(288) = "法罗群岛(丹麦)"
+arr(289) = "阿布哈兹"
+arr(290) = "格陵兰(丹麦)"
+arr(292) = "圣马力诺"
+arr(293) = "斯洛文尼亚"
+arr(294) = "卢森堡"
+arr(295) = "列支敦士登"
+arr(297) = "黑山共和国"
+arr(302) = "加拿大"
+arr(308) = "圣皮埃尔和密克隆群岛(法国)"
+arr(310) = "美国"
+arr(311) = "美国"
+arr(312) = "美国"
+arr(313) = "美国"
+arr(314) = "美国"
+arr(315) = "美国"
+arr(316) = "美国"
+arr(330) = "波多黎各(美国)"
+arr(332) = "美属维尔京群岛(美国)"
+arr(334) = "墨西哥"
+arr(338) = "牙买加"
+arr(340) = "马提尼克(法国)"
+arr(342) = "巴巴多斯"
+arr(344) = "安提瓜和巴布达"
+arr(346) = "开曼群岛(英国)"
+arr(348) = "英属维尔京群岛(英国)"
+arr(350) = "百慕大(英国)"
+arr(352) = "格林纳达"
+arr(354) = "蒙塞拉特岛(英国)"
+arr(356) = "圣基茨和尼维斯"
+arr(358) = "圣卢西亚"
+arr(360) = "圣文森及格林纳丁"
+arr(362) = "库拉索(荷兰王国)"
+arr(363) = "阿鲁巴(荷兰王国)"
+arr(364) = "巴哈马"
+arr(365) = "安圭拉"
+arr(366) = "多米尼克"
+arr(368) = "古巴"
+arr(370) = "多米尼加共和国"
+arr(372) = "海地"
+arr(374) = "特立尼达和多巴哥"
+arr(376) = "特克斯和凯科斯群岛(英国)"
+arr(400) = "阿塞拜疆"
+arr(401) = "哈萨克斯坦"
+arr(402) = "不丹"
+arr(404) = "印度"
+arr(405) = "印度"
+arr(406) = "印度"
+arr(410) = "巴基斯坦"
+arr(412) = "阿富汗"
+arr(413) = "斯里兰卡"
+arr(414) = "缅甸"
+arr(415) = "黎巴嫩"
+arr(416) = "约旦"
+arr(417) = "叙利亚"
+arr(418) = "伊拉克"
+arr(419) = "科威特"
+arr(420) = "沙特阿拉伯"
+arr(421) = "也门"
+arr(422) = "阿曼"
+arr(424) = "阿拉伯联合酋长国"
+arr(425) = "巴勒斯坦"
+arr(426) = "巴林"
+arr(427) = "卡塔尔"
+arr(428) = "蒙古国"
+arr(429) = "尼泊尔"
+arr(430) = "阿拉伯联合酋长国"
+arr(431) = "阿拉伯联合酋长国"
+arr(432) = "伊朗"
+arr(434) = "乌兹别克斯坦"
+arr(436) = "塔吉克斯坦"
+arr(437) = "吉尔吉斯斯坦"
+arr(438) = "土库曼斯坦"
+arr(440) = "日本"
+arr(441) = "日本"
+arr(450) = "韩国"
+arr(452) = "越南"
+arr(454) = "香港(中国)"
+arr(455) = "澳门(中国)"
+arr(456) = "柬埔寨"
+arr(457) = "老挝"
+arr(460) = "中国"
+arr(461) = "中国"
+arr(466) = "台湾"
+arr(467) = "朝鲜"
+arr(470) = "孟加拉国"
+arr(472) = "马尔代夫"
+arr(502) = "马来西亚"
+arr(505) = "澳大利亚"
+arr(510) = "印度尼西亚"
+arr(514) = "东帝汶"
+arr(515) = "菲律宾"
+arr(520) = "泰国"
+arr(525) = "新加坡"
+arr(528) = "文莱"
+arr(530) = "新西兰"
+arr(534) = "北马里亚纳群岛(美国)"
+arr(535) = "关岛(美国)"
+arr(536) = "瑙鲁"
+arr(537) = "巴布亚新几内亚"
+arr(539) = "汤加"
+arr(540) = "所罗门群岛"
+arr(541) = "瓦努阿图"
+arr(542) = "斐济"
+arr(543) = "瓦利斯和富图纳群岛(法国)"
+arr(544) = "美属萨摩亚(美国)"
+arr(545) = "基里巴斯"
+arr(546) = "新喀里多尼亚(法国)"
+arr(547) = "法属波利尼西亚(法国)"
+arr(548) = "库克群岛(新西兰)"
+arr(549) = "萨摩亚"
+arr(550) = "密克罗尼西亚联邦"
+arr(551) = "马绍尔群岛"
+arr(552) = "帕劳"
+arr(553) = "图瓦卢"
+arr(554) = "托克劳"
+arr(555) = "纽埃"
+arr(602) = "埃及"
+arr(603) = "阿尔及利亚"
+arr(604) = "摩洛哥"
+arr(605) = "突尼斯"
+arr(606) = "利比亚"
+arr(607) = "冈比亚"
+arr(608) = "塞内加尔"
+arr(609) = "毛里塔尼亚"
+arr(610) = "马里共和国"
+arr(611) = "几内亚"
+arr(612) = "科特迪瓦"
+arr(613) = "布基纳法索"
+arr(614) = "尼日尔"
+arr(615) = "多哥"
+arr(616) = "贝宁"
+arr(617) = "毛里求斯"
+arr(618) = "利比里亚"
+arr(619) = "塞拉利昂共和国"
+arr(620) = "加纳"
+arr(621) = "尼日利亚"
+arr(622) = "查德"
+arr(623) = "中非共和国"
+arr(624) = "喀麦隆"
+arr(625) = "佛得角"
+arr(626) = "圣多美和普林西比"
+arr(627) = "赤道几内亚"
+arr(628) = "加蓬"
+arr(629) = "刚果共和国"
+arr(630) = "刚果民主共和国"
+arr(631) = "安哥拉"
+arr(632) = "几内亚比绍"
+arr(633) = "塞舌尔"
+arr(634) = "苏丹"
+arr(635) = "卢旺达"
+arr(636) = "埃塞俄比亚"
+arr(637) = "索马里"
+arr(638) = "吉布提"
+arr(639) = "肯尼亚"
+arr(640) = "坦桑尼亚"
+arr(641) = "乌干达"
+arr(642) = "布隆迪"
+arr(643) = "莫桑比克"
+arr(645) = "赞比亚"
+arr(646) = "马达加斯加"
+arr(647) = "留尼旺(法国)"
+arr(648) = "津巴布韦"
+arr(649) = "纳米比亚"
+arr(650) = "马拉维"
+arr(651) = "莱索托"
+arr(652) = "博茨瓦纳"
+arr(653) = "斯威士兰"
+arr(654) = "科摩罗"
+arr(655) = "南非"
+arr(657) = "厄立特里亚"
+arr(659) = "南苏丹"
+arr(702) = "伯利兹"
+arr(704) = "危地马拉"
+arr(706) = "萨尔瓦多"
+arr(708) = "洪都拉斯"
+arr(710) = "尼加拉瓜"
+arr(712) = "哥斯达黎加"
+arr(714) = "巴拿马"
+arr(716) = "秘鲁"
+arr(722) = "阿根廷"
+arr(724) = "巴西"
+arr(730) = "智利"
+arr(732) = "哥伦比亚"
+arr(734) = "委内瑞拉"
+arr(736) = "玻利维亚"
+arr(738) = "圭亚那"
+arr(740) = "厄瓜多尔"
+arr(742) = "法属圭亚那(法国)"
+arr(744) = "巴拉圭"
+arr(746) = "苏里南"
+arr(748) = "乌拉圭"
+arr(750) = "福克兰群岛(英国)"
+End Sub
+
+
+Function lbs(infos) As String
+    'Call init
+    a = Split(infos, ",")
+    mcc = a(0)
+    mnc = a(1)
+    If mcc = 460 And mnc = 3 Then
+        mnc = 11
+    End If
+    lac = a(2)
+    ci = a(3)
+    
+    If mcc = 460 Then
+        Set objHTTP = CreateObject("MSXML2.ServerXMLHTTP")
+        'Url = "http://api.cellocation.com:81/cell/?coord=gcj02&output=csv&mcc=" & mcc & "&mnc=" & mnc & "&lac=" & lac & "&ci=" & ci
+        Url = "http://api.cellocation.com:81/cell/?output=csv&mcc=" & mcc & "&mnc=" & mnc & "&lac=" & lac & "&ci=" & ci
+        objHTTP.Open "GET", Url, False
+        objHTTP.setRequestHeader "User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"
+        objHTTP.send ("")
+        errcode = Split(objHTTP.ResponseText, ",")(0)
+        If errcode = 0 Then
+            lbs = Split(objHTTP.ResponseText, """")(1)
+        ElseIf errcode = 10000 Then
+            lbs = "参数错误"
+        ElseIf errcode = 10001 Then
+            lbs = "无查询结果"
+        End If
+        
+    Else
+        Set objHTTP1 = CreateObject("MSXML2.ServerXMLHTTP")
+        Url1 = "http://api.cellocation.com:81/global/?output=csv&mcc=" & mcc & "&mnc=" & mnc & "&lac=" & lac & "&ci=" & ci
+        objHTTP1.Open "GET", Url1, False
+        objHTTP1.setRequestHeader "User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"
+        objHTTP1.send ("")
+        errcode1 = Split(objHTTP1.ResponseText, ",")(0)
+        
+        If errcode1 = 0 Then
+            Key = "高德地图的key"
+            lat = Split(objHTTP1.ResponseText, ",")(1)
+            lon = Split(objHTTP1.ResponseText, ",")(2)
+            lbs = arr(mcc) & " " & lat & "," & lon
+            
+            'Location = lat & "," & lon
+            'Set objHTTP2 = CreateObject("MSXML2.ServerXMLHTTP")
+            'Url2 = "https://restapi.amap.com/v3/geocode/regeo?key=" & Key & "&location=" & Location
+            'objHTTP2.Open "GET", Url2, False
+            'objHTTP2.setRequestHeader "User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"
+            'objHTTP2.send ("")
+            'lbs = objHTTP2.ResponseText
+        ElseIf errcode1 = 10000 Then
+            lbs = arr(mcc)  '"参数错误"
+        ElseIf errcode1 = 10001 Then
+            lbs = arr(mcc)  '"无查询结果"
+        End If
+    End If
+    
+End Function
+
+Function ipapi(ip) As String
+    Set objHTTP = CreateObject("MSXML2.ServerXMLHTTP")
+    'Url = "http://ip-api.com/json/" & ip & "?lang=zh-CN&fields=17"
+    Url = "http://ip.cz88.net/data.php?ip=" & ip
+    objHTTP.Open "GET", Url, False
+    objHTTP.setRequestHeader "User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"
+    objHTTP.send ("")
+    ipapi = Split(objHTTP.ResponseText, "'")(3)
+End Function
